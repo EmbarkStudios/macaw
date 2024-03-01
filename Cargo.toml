@@ -1,0 +1,72 @@
+[package]
+name = "macaw"
+version = "0.19.1"
+license = "MIT OR Apache-2.0"
+description = "An opinionated game math library built on top the excellent glam"
+keywords = ["gamedev", "math"]
+categories = ["game-engines"]
+authors.workspace = true
+edition.workspace = true
+# note that since macaw is built for vulkan as well, the nightly version used
+# when compiling shaders might be "behind" the current stable version failing
+# compilation
+#rust-version.workspace = true
+publish = true
+
+[lints]
+workspace = true
+
+[lib]
+doctest = false
+test = true
+
+[[bench]]
+harness = false
+name = "iso_transform"
+
+[[bench]]
+harness = false
+name = "bounding_box"
+
+[[bench]]
+harness = false
+name = "conformal3"
+
+[dependencies]
+# avoid adding more dependencies here!
+bytemuck = { version = "1.9", optional = true }
+glam = { version = "0.25", default-features = false }
+serde = { version = "1.0", default-features = false, optional = true, features = [
+    "derive",
+] }
+speedy = { version = "0.8", optional = true, features = ["glam"] }
+
+[target.'cfg(target_arch = "spirv")'.dependencies]
+num-traits = { version = "0.2.14", default-features = false, features = [
+    "libm",
+] }
+
+[dev-dependencies]
+ark-public-api-test = { workspace = true }
+# can't use workspace dependency for tiny-bench since it as a wildcard version
+tiny-bench = "0.3.0"
+
+# miri interpreter doesn't support SIMD, so auto-disable it in glam.
+# https://github.com/rust-lang/miri/issues/662
+[target.'cfg(miri)'.dependencies]
+glam = { version = "0.25", default-features = false, features = [
+    "scalar-math",
+] }
+
+[features]
+default = ["std"]
+libm = ["glam/libm"]
+std = ["glam/std"]
+with_bytemuck = ["bytemuck", "glam/bytemuck"]
+with_serde = ["serde", "glam/serde"]
+with_speedy = ["speedy"]
+
+# enable additional checks if debug assertions are enabled
+debug_assert = ["glam/debug-glam-assert"]
+# always enable additional checks
+assert = ["glam/glam-assert"]

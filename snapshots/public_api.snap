@@ -1,0 +1,558 @@
+---
+source: packages/macaw/tests/public-api.rs
+expression: "::ark_public_api_test::list_public_api(::ark_public_api_test::Options {\n            target: None,\n        }).unwrap()"
+---
+pub mod macaw
+pub use macaw::Affine3A
+pub use macaw::DAffine2
+pub use macaw::DAffine3
+pub use macaw::DMat2
+pub use macaw::DMat3
+pub use macaw::DMat4
+pub use macaw::DQuat
+pub use macaw::DVec2
+pub use macaw::DVec3
+pub use macaw::DVec4
+pub use macaw::EulerRot
+pub use macaw::IVec2
+pub use macaw::IVec3
+pub use macaw::IVec4
+pub use macaw::Mat2
+pub use macaw::Mat3
+pub use macaw::Mat3A
+pub use macaw::Mat4
+pub use macaw::Quat
+pub use macaw::UVec2
+pub use macaw::UVec3
+pub use macaw::UVec4
+pub use macaw::Vec2
+pub use macaw::Vec2Swizzles
+pub use macaw::Vec3
+pub use macaw::Vec3A
+pub use macaw::Vec3Swizzles
+pub use macaw::Vec4
+pub use macaw::Vec4Swizzles
+pub use macaw::dmat2
+pub use macaw::dmat3
+pub use macaw::dmat4
+pub use macaw::dquat
+pub use macaw::dvec2
+pub use macaw::dvec3
+pub use macaw::dvec4
+pub use macaw::ivec2
+pub use macaw::ivec3
+pub use macaw::mat2
+pub use macaw::mat3
+pub use macaw::mat3a
+pub use macaw::mat4
+pub use macaw::quat
+pub use macaw::uvec2
+pub use macaw::uvec3
+pub use macaw::uvec4
+pub use macaw::vec2
+pub use macaw::vec3
+pub use macaw::vec3a
+pub use macaw::vec4
+pub mod macaw::prelude
+pub use macaw::prelude::Vec2Swizzles
+pub use macaw::prelude::Vec3Swizzles
+pub use macaw::prelude::Vec4Swizzles
+pub trait macaw::prelude::FloatExt
+pub fn macaw::prelude::FloatExt::lerp(self, other: Self, a: Self) -> Self
+pub fn macaw::prelude::FloatExt::saturate(self) -> Self
+pub fn macaw::prelude::FloatExt::step(self, value: Self) -> Self
+pub fn macaw::prelude::FloatExt::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+impl macaw::FloatExt for f32
+pub fn f32::lerp(self, other: Self, a: Self) -> Self
+pub fn f32::saturate(self) -> Self
+pub fn f32::step(self, value: Self) -> Self
+pub fn f32::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub trait macaw::prelude::QuatExt: core::marker::Sized
+pub fn macaw::prelude::QuatExt::rotate_negative_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+pub fn macaw::prelude::QuatExt::rotate_positive_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+impl macaw::QuatExt for glam::f32::sse2::quat::Quat
+pub fn glam::f32::sse2::quat::Quat::rotate_negative_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+pub fn glam::f32::sse2::quat::Quat::rotate_positive_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+pub trait macaw::prelude::Vec2Ext
+pub fn macaw::prelude::Vec2Ext::angle(&self) -> f32
+pub fn macaw::prelude::Vec2Ext::fract(self) -> Self
+pub fn macaw::prelude::Vec2Ext::from_angle(angle: f32) -> Self
+pub fn macaw::prelude::Vec2Ext::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn macaw::prelude::Vec2Ext::mean(self) -> f32
+pub fn macaw::prelude::Vec2Ext::saturate(self) -> Self
+pub fn macaw::prelude::Vec2Ext::step(self, value: Self) -> Self
+pub fn macaw::prelude::Vec2Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
+pub fn macaw::prelude::Vec2Ext::trunc(self) -> Self
+impl macaw::Vec2Ext for glam::f32::vec2::Vec2
+pub fn glam::f32::vec2::Vec2::angle(&self) -> f32
+pub fn glam::f32::vec2::Vec2::fract(self) -> Self
+pub fn glam::f32::vec2::Vec2::from_angle(angle: f32) -> Self
+pub fn glam::f32::vec2::Vec2::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn glam::f32::vec2::Vec2::mean(self) -> f32
+pub fn glam::f32::vec2::Vec2::saturate(self) -> Self
+pub fn glam::f32::vec2::Vec2::step(self, value: Self) -> Self
+pub fn glam::f32::vec2::Vec2::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub fn glam::f32::vec2::Vec2::trunc(self) -> Self
+pub trait macaw::prelude::Vec3Ext
+pub fn macaw::prelude::Vec3Ext::fract(self) -> Self
+pub fn macaw::prelude::Vec3Ext::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn macaw::prelude::Vec3Ext::ln(self) -> Self
+pub fn macaw::prelude::Vec3Ext::mean(self) -> f32
+pub fn macaw::prelude::Vec3Ext::reflect(self, normal: Self) -> Self
+pub fn macaw::prelude::Vec3Ext::saturate(self) -> Self
+pub fn macaw::prelude::Vec3Ext::sqrt(self) -> Self
+pub fn macaw::prelude::Vec3Ext::step(self, value: Self) -> Self
+pub fn macaw::prelude::Vec3Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
+pub fn macaw::prelude::Vec3Ext::trunc(self) -> Self
+impl macaw::Vec3Ext for glam::f32::vec3::Vec3
+pub fn glam::f32::vec3::Vec3::fract(self) -> Self
+pub fn glam::f32::vec3::Vec3::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn glam::f32::vec3::Vec3::ln(self) -> Self
+pub fn glam::f32::vec3::Vec3::mean(self) -> f32
+pub fn glam::f32::vec3::Vec3::reflect(self, normal: Self) -> Self
+pub fn glam::f32::vec3::Vec3::saturate(self) -> Self
+pub fn glam::f32::vec3::Vec3::sqrt(self) -> Self
+pub fn glam::f32::vec3::Vec3::step(self, value: Self) -> Self
+pub fn glam::f32::vec3::Vec3::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub fn glam::f32::vec3::Vec3::trunc(self) -> Self
+pub trait macaw::prelude::Vec4Ext
+pub fn macaw::prelude::Vec4Ext::fract(self) -> Self
+pub fn macaw::prelude::Vec4Ext::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn macaw::prelude::Vec4Ext::mean(self) -> f32
+pub fn macaw::prelude::Vec4Ext::sqrt(self) -> Self
+pub fn macaw::prelude::Vec4Ext::step(self, value: Self) -> Self
+pub fn macaw::prelude::Vec4Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
+pub fn macaw::prelude::Vec4Ext::to_bits(self) -> glam::u32::uvec4::UVec4
+pub fn macaw::prelude::Vec4Ext::trunc(self) -> Self
+impl macaw::Vec4Ext for glam::f32::sse2::vec4::Vec4
+pub fn glam::f32::sse2::vec4::Vec4::fract(self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn glam::f32::sse2::vec4::Vec4::mean(self) -> f32
+pub fn glam::f32::sse2::vec4::Vec4::sqrt(self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::step(self, value: Self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::to_bits(self) -> glam::u32::uvec4::UVec4
+pub fn glam::f32::sse2::vec4::Vec4::trunc(self) -> Self
+pub struct macaw::BoundingBox
+pub macaw::BoundingBox::max: glam::f32::vec3::Vec3
+pub macaw::BoundingBox::min: glam::f32::vec3::Vec3
+impl macaw::BoundingBox
+pub const macaw::BoundingBox::ZERO: Self
+pub fn macaw::BoundingBox::bounding_sphere_radius(&self) -> f32
+pub fn macaw::BoundingBox::center(&self) -> glam::f32::vec3::Vec3
+pub fn macaw::BoundingBox::centered_bounding_sphere_radius(&self) -> f32
+pub fn macaw::BoundingBox::contains(&self, point: glam::f32::vec3::Vec3) -> bool
+pub fn macaw::BoundingBox::corners(&self) -> [glam::f32::vec3::Vec3; 8]
+pub fn macaw::BoundingBox::edges(&self) -> [[glam::f32::vec3::Vec3; 2]; 12]
+pub fn macaw::BoundingBox::everything() -> Self
+pub fn macaw::BoundingBox::expanded(&self, padding: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::BoundingBox::extend(&mut self, pos: glam::f32::vec3::Vec3)
+pub fn macaw::BoundingBox::from_center_size(center: glam::f32::vec3::Vec3, size: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::BoundingBox::from_min_max(min: glam::f32::vec3::Vec3, max: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::BoundingBox::from_min_size(min: glam::f32::vec3::Vec3, size: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::BoundingBox::from_points(points: impl core::iter::traits::iterator::Iterator<Item = glam::f32::vec3::Vec3>) -> Self
+pub fn macaw::BoundingBox::half_size(&self) -> glam::f32::vec3::Vec3
+pub fn macaw::BoundingBox::intersection(self, other: Self) -> Self
+pub fn macaw::BoundingBox::is_finite(&self) -> bool
+pub fn macaw::BoundingBox::is_nan(&self) -> bool
+pub fn macaw::BoundingBox::is_nothing(&self) -> bool
+pub fn macaw::BoundingBox::is_point(&self) -> bool
+pub fn macaw::BoundingBox::is_something(&self) -> bool
+pub fn macaw::BoundingBox::nothing() -> Self
+pub fn macaw::BoundingBox::rotated_around_origin(&self, q: &glam::f32::sse2::quat::Quat) -> Self
+pub fn macaw::BoundingBox::size(&self) -> glam::f32::vec3::Vec3
+pub fn macaw::BoundingBox::transform_affine3(&self, m: &glam::f32::affine3a::Affine3A) -> Self
+pub fn macaw::BoundingBox::transform_conformal3(&self, m: &macaw::Conformal3) -> Self
+pub fn macaw::BoundingBox::transform_iso(&self, m: &macaw::IsoTransform) -> Self
+pub fn macaw::BoundingBox::translated(&self, translation: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::BoundingBox::union(self, other: Self) -> Self
+pub fn macaw::BoundingBox::volume(&self) -> f32
+impl core::fmt::Debug for macaw::BoundingBox
+pub fn macaw::BoundingBox::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::BoundingBox
+pub fn macaw::BoundingBox::minimum_bytes_needed() -> usize
+pub fn macaw::BoundingBox::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::BoundingBox
+pub fn macaw::BoundingBox::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
+impl core::clone::Clone for macaw::BoundingBox
+pub fn macaw::BoundingBox::clone(&self) -> macaw::BoundingBox
+impl core::cmp::PartialEq for macaw::BoundingBox
+pub fn macaw::BoundingBox::eq(&self, other: &macaw::BoundingBox) -> bool
+impl core::default::Default for macaw::BoundingBox
+pub fn macaw::BoundingBox::default() -> macaw::BoundingBox
+impl core::marker::Copy for macaw::BoundingBox
+impl core::marker::StructuralPartialEq for macaw::BoundingBox
+impl serde::ser::Serialize for macaw::BoundingBox
+pub fn macaw::BoundingBox::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'de> serde::de::Deserialize<'de> for macaw::BoundingBox
+pub fn macaw::BoundingBox::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+#[repr(transparent)] pub struct macaw::ColorRgba8(pub [u8; 4])
+impl bytemuck::pod::Pod for macaw::ColorRgba8
+impl bytemuck::zeroable::Zeroable for macaw::ColorRgba8
+impl core::convert::From<[f32; 4]> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::from(c: [f32; 4]) -> Self
+impl core::convert::From<[u8; 4]> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::from(srgba: [u8; 4]) -> Self
+impl core::convert::From<glam::f32::sse2::vec4::Vec4> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::from(v: glam::f32::sse2::vec4::Vec4) -> Self
+impl core::convert::From<macaw::ColorRgba8> for [u8; 4]
+pub fn [u8; 4]::from(srgba: macaw::ColorRgba8) -> Self
+impl core::convert::From<macaw::ColorRgba8> for glam::f32::sse2::vec4::Vec4
+pub fn glam::f32::sse2::vec4::Vec4::from(c: macaw::ColorRgba8) -> Self
+impl core::convert::From<macaw::ColorRgba8> for u32
+pub fn u32::from(c: macaw::ColorRgba8) -> Self
+impl core::convert::From<u32> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::from(c: u32) -> Self
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::minimum_bytes_needed() -> usize
+pub fn macaw::ColorRgba8::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
+impl<C_, T_> speedy::utils::ZeroCopyable<C_, T_> for macaw::ColorRgba8 where [u8; 4]: speedy::utils::ZeroCopyable<C_, T_>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
+impl core::clone::Clone for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::clone(&self) -> macaw::ColorRgba8
+impl core::cmp::Eq for macaw::ColorRgba8
+impl core::cmp::PartialEq for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::eq(&self, other: &macaw::ColorRgba8) -> bool
+impl core::fmt::Debug for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::marker::Copy for macaw::ColorRgba8
+impl core::marker::StructuralPartialEq for macaw::ColorRgba8
+impl serde::ser::Serialize for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'de> serde::de::Deserialize<'de> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+pub struct macaw::Conformal3
+pub macaw::Conformal3::rotation: glam::f32::sse2::quat::Quat
+pub macaw::Conformal3::translation_and_scale: glam::f32::sse2::vec4::Vec4
+impl macaw::Conformal3
+pub const macaw::Conformal3::IDENTITY: Self
+pub fn macaw::Conformal3::from_affine3a_lossy(transform: &glam::f32::affine3a::Affine3A) -> Self
+pub fn macaw::Conformal3::from_iso_transform(t: macaw::IsoTransform) -> Self
+pub fn macaw::Conformal3::from_quat(rotation: glam::f32::sse2::quat::Quat) -> Self
+pub fn macaw::Conformal3::from_rotation_translation(rotation: glam::f32::sse2::quat::Quat, translation: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::Conformal3::from_scale(scale: f32) -> Self
+pub fn macaw::Conformal3::from_scale_rotation_translation(scale: f32, rotation: glam::f32::sse2::quat::Quat, translation: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::Conformal3::from_translation(translation: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::Conformal3::inv_scale(&self) -> f32
+pub fn macaw::Conformal3::inverse(&self) -> Self
+pub fn macaw::Conformal3::is_finite(&self) -> bool
+pub fn macaw::Conformal3::look_at_rh(eye: glam::f32::vec3::Vec3, target: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<Self>
+pub fn macaw::Conformal3::normalize(&self) -> Self
+pub fn macaw::Conformal3::rotation(&self) -> glam::f32::sse2::quat::Quat
+pub fn macaw::Conformal3::scale(&self) -> f32
+pub fn macaw::Conformal3::set_rotation(&mut self, rotation: glam::f32::sse2::quat::Quat)
+pub fn macaw::Conformal3::set_scale(&mut self, scale: f32)
+pub fn macaw::Conformal3::set_translation(&mut self, translation: glam::f32::vec3::Vec3)
+pub fn macaw::Conformal3::to_affine3a(self) -> glam::f32::affine3a::Affine3A
+pub fn macaw::Conformal3::to_iso_transform(self) -> macaw::IsoTransform
+pub fn macaw::Conformal3::to_mat4(self) -> glam::f32::sse2::mat4::Mat4
+pub fn macaw::Conformal3::to_scale_rotation_translation(self) -> (f32, glam::f32::sse2::quat::Quat, glam::f32::vec3::Vec3)
+pub fn macaw::Conformal3::transform_point3(&self, value: glam::f32::vec3::Vec3) -> glam::f32::vec3::Vec3
+pub fn macaw::Conformal3::transform_point3a(&self, value: glam::f32::sse2::vec3a::Vec3A) -> glam::f32::sse2::vec3a::Vec3A
+pub fn macaw::Conformal3::transform_vector3(&self, value: glam::f32::vec3::Vec3) -> glam::f32::vec3::Vec3
+pub fn macaw::Conformal3::transform_vector3a(&self, value: glam::f32::sse2::vec3a::Vec3A) -> glam::f32::sse2::vec3a::Vec3A
+pub fn macaw::Conformal3::translation(&self) -> glam::f32::vec3::Vec3
+pub fn macaw::Conformal3::translation_and_scale(&self) -> glam::f32::sse2::vec4::Vec4
+impl core::convert::From<macaw::Conformal3> for glam::f32::affine3a::Affine3A
+pub fn glam::f32::affine3a::Affine3A::from(c: macaw::Conformal3) -> Self
+impl core::convert::From<macaw::Conformal3> for glam::f32::sse2::mat4::Mat4
+pub fn glam::f32::sse2::mat4::Mat4::from(c: macaw::Conformal3) -> Self
+impl core::convert::From<macaw::IsoTransform> for macaw::Conformal3
+pub fn macaw::Conformal3::from(c: macaw::IsoTransform) -> Self
+impl core::default::Default for macaw::Conformal3
+pub fn macaw::Conformal3::default() -> Self
+impl core::fmt::Debug for macaw::Conformal3
+pub fn macaw::Conformal3::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::ops::arith::Mul for &macaw::Conformal3
+pub type &macaw::Conformal3::Output = macaw::Conformal3
+pub fn &macaw::Conformal3::mul(self, rhs: &macaw::Conformal3) -> macaw::Conformal3
+impl core::ops::arith::Mul for macaw::Conformal3
+pub type macaw::Conformal3::Output = macaw::Conformal3
+pub fn macaw::Conformal3::mul(self, rhs: Self) -> Self
+impl core::ops::arith::Mul<macaw::Conformal3> for &macaw::Conformal3
+pub type &macaw::Conformal3::Output = macaw::Conformal3
+pub fn &macaw::Conformal3::mul(self, rhs: macaw::Conformal3) -> macaw::Conformal3
+impl core::ops::arith::Mul<macaw::Conformal3> for macaw::IsoTransform
+pub type macaw::IsoTransform::Output = macaw::Conformal3
+pub fn macaw::IsoTransform::mul(self, rhs: macaw::Conformal3) -> macaw::Conformal3
+impl core::ops::arith::Mul<macaw::IsoTransform> for macaw::Conformal3
+pub type macaw::Conformal3::Output = macaw::Conformal3
+pub fn macaw::Conformal3::mul(self, rhs: macaw::IsoTransform) -> Self
+impl core::ops::arith::Mul<macaw::Ray3> for macaw::Conformal3
+pub type macaw::Conformal3::Output = macaw::Ray3
+pub fn macaw::Conformal3::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::Conformal3
+pub fn macaw::Conformal3::minimum_bytes_needed() -> usize
+pub fn macaw::Conformal3::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Conformal3
+pub fn macaw::Conformal3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
+impl core::clone::Clone for macaw::Conformal3
+pub fn macaw::Conformal3::clone(&self) -> macaw::Conformal3
+impl core::cmp::PartialEq for macaw::Conformal3
+pub fn macaw::Conformal3::eq(&self, other: &macaw::Conformal3) -> bool
+impl core::marker::Copy for macaw::Conformal3
+impl core::marker::StructuralPartialEq for macaw::Conformal3
+impl serde::ser::Serialize for macaw::Conformal3
+pub fn macaw::Conformal3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'de> serde::de::Deserialize<'de> for macaw::Conformal3
+pub fn macaw::Conformal3::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+pub struct macaw::IsoTransform
+pub macaw::IsoTransform::rotation: glam::f32::sse2::quat::Quat
+pub macaw::IsoTransform::translation: glam::f32::sse2::vec3a::Vec3A
+impl macaw::IsoTransform
+pub const macaw::IsoTransform::IDENTITY: Self
+pub fn macaw::IsoTransform::from_mat4(t: &glam::f32::sse2::mat4::Mat4) -> core::option::Option<Self>
+pub fn macaw::IsoTransform::from_quat(rotation: glam::f32::sse2::quat::Quat) -> Self
+pub fn macaw::IsoTransform::from_rotation_around_point(rotation: glam::f32::sse2::quat::Quat, point: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::IsoTransform::from_rotation_translation(rotation: glam::f32::sse2::quat::Quat, translation: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::IsoTransform::from_translation(translation: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::IsoTransform::inverse(&self) -> Self
+pub fn macaw::IsoTransform::is_finite(&self) -> bool
+pub fn macaw::IsoTransform::is_nan(&self) -> bool
+pub fn macaw::IsoTransform::look_at_rh(eye: glam::f32::vec3::Vec3, target: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<Self>
+pub fn macaw::IsoTransform::normalize(&self) -> Self
+pub fn macaw::IsoTransform::rotation(&self) -> glam::f32::sse2::quat::Quat
+pub fn macaw::IsoTransform::set_rotation(&mut self, rotation: glam::f32::sse2::quat::Quat)
+pub fn macaw::IsoTransform::set_translation(&mut self, translation: glam::f32::vec3::Vec3)
+pub fn macaw::IsoTransform::to_mat4(self) -> glam::f32::sse2::mat4::Mat4
+pub fn macaw::IsoTransform::transform_point3(&self, p: glam::f32::vec3::Vec3) -> glam::f32::vec3::Vec3
+pub fn macaw::IsoTransform::transform_vector3(&self, v: glam::f32::vec3::Vec3) -> glam::f32::vec3::Vec3
+pub fn macaw::IsoTransform::translation(&self) -> glam::f32::vec3::Vec3
+impl core::convert::From<macaw::IsoTransform> for glam::f32::affine3a::Affine3A
+pub fn glam::f32::affine3a::Affine3A::from(iso: macaw::IsoTransform) -> Self
+impl core::convert::From<macaw::IsoTransform> for glam::f32::sse2::mat4::Mat4
+pub fn glam::f32::sse2::mat4::Mat4::from(t: macaw::IsoTransform) -> Self
+impl core::convert::From<macaw::IsoTransform> for macaw::Conformal3
+pub fn macaw::Conformal3::from(c: macaw::IsoTransform) -> Self
+impl core::default::Default for macaw::IsoTransform
+pub fn macaw::IsoTransform::default() -> Self
+impl core::fmt::Debug for macaw::IsoTransform
+pub fn macaw::IsoTransform::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::ops::arith::Mul for &macaw::IsoTransform
+pub type &macaw::IsoTransform::Output = macaw::IsoTransform
+pub fn &macaw::IsoTransform::mul(self, rhs: &macaw::IsoTransform) -> macaw::IsoTransform
+impl core::ops::arith::Mul for macaw::IsoTransform
+pub type macaw::IsoTransform::Output = macaw::IsoTransform
+pub fn macaw::IsoTransform::mul(self, rhs: Self) -> Self
+impl core::ops::arith::Mul<glam::f32::affine3a::Affine3A> for macaw::IsoTransform
+pub type macaw::IsoTransform::Output = glam::f32::affine3a::Affine3A
+pub fn macaw::IsoTransform::mul(self, rhs: glam::f32::affine3a::Affine3A) -> glam::f32::affine3a::Affine3A
+impl core::ops::arith::Mul<glam::f32::sse2::mat4::Mat4> for macaw::IsoTransform
+pub type macaw::IsoTransform::Output = glam::f32::sse2::mat4::Mat4
+pub fn macaw::IsoTransform::mul(self, rhs: glam::f32::sse2::mat4::Mat4) -> glam::f32::sse2::mat4::Mat4
+impl core::ops::arith::Mul<macaw::Conformal3> for macaw::IsoTransform
+pub type macaw::IsoTransform::Output = macaw::Conformal3
+pub fn macaw::IsoTransform::mul(self, rhs: macaw::Conformal3) -> macaw::Conformal3
+impl core::ops::arith::Mul<macaw::IsoTransform> for &macaw::IsoTransform
+pub type &macaw::IsoTransform::Output = macaw::IsoTransform
+pub fn &macaw::IsoTransform::mul(self, rhs: macaw::IsoTransform) -> macaw::IsoTransform
+impl core::ops::arith::Mul<macaw::IsoTransform> for glam::f32::affine3a::Affine3A
+pub type glam::f32::affine3a::Affine3A::Output = glam::f32::affine3a::Affine3A
+pub fn glam::f32::affine3a::Affine3A::mul(self, rhs: macaw::IsoTransform) -> Self
+impl core::ops::arith::Mul<macaw::IsoTransform> for glam::f32::sse2::mat4::Mat4
+pub type glam::f32::sse2::mat4::Mat4::Output = glam::f32::sse2::mat4::Mat4
+pub fn glam::f32::sse2::mat4::Mat4::mul(self, rhs: macaw::IsoTransform) -> Self
+impl core::ops::arith::Mul<macaw::IsoTransform> for macaw::Conformal3
+pub type macaw::Conformal3::Output = macaw::Conformal3
+pub fn macaw::Conformal3::mul(self, rhs: macaw::IsoTransform) -> Self
+impl core::ops::arith::Mul<macaw::Ray3> for macaw::IsoTransform
+pub type macaw::IsoTransform::Output = macaw::Ray3
+pub fn macaw::IsoTransform::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::IsoTransform
+pub fn macaw::IsoTransform::minimum_bytes_needed() -> usize
+pub fn macaw::IsoTransform::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::IsoTransform
+pub fn macaw::IsoTransform::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
+impl core::clone::Clone for macaw::IsoTransform
+pub fn macaw::IsoTransform::clone(&self) -> macaw::IsoTransform
+impl core::cmp::PartialEq for macaw::IsoTransform
+pub fn macaw::IsoTransform::eq(&self, other: &macaw::IsoTransform) -> bool
+impl core::marker::Copy for macaw::IsoTransform
+impl core::marker::StructuralPartialEq for macaw::IsoTransform
+impl serde::ser::Serialize for macaw::IsoTransform
+pub fn macaw::IsoTransform::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'de> serde::de::Deserialize<'de> for macaw::IsoTransform
+pub fn macaw::IsoTransform::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+pub struct macaw::MeshGen
+pub macaw::MeshGen::indices: alloc::vec::Vec<u32>
+pub macaw::MeshGen::normals: alloc::vec::Vec<glam::f32::vec3::Vec3>
+pub macaw::MeshGen::positions: alloc::vec::Vec<glam::f32::vec3::Vec3>
+impl macaw::MeshGen
+pub fn macaw::MeshGen::new() -> Self
+pub fn macaw::MeshGen::push_capsule(&mut self, radius: f32, length_y: f32, subdivision_x: usize, subdivision_y: usize, transform: macaw::IsoTransform) -> core::ops::range::Range<usize>
+pub fn macaw::MeshGen::push_cube(&mut self, half_size: glam::f32::vec3::Vec3, transform: macaw::IsoTransform) -> core::ops::range::Range<usize>
+pub fn macaw::MeshGen::push_sphere(&mut self, radius: f32, subdivision_x: usize, subdivision_y: usize, transform: macaw::IsoTransform) -> core::ops::range::Range<usize>
+impl core::default::Default for macaw::MeshGen
+pub fn macaw::MeshGen::default() -> macaw::MeshGen
+pub struct macaw::Plane3
+pub macaw::Plane3::d: f32
+pub macaw::Plane3::normal: glam::f32::vec3::Vec3
+impl macaw::Plane3
+pub const macaw::Plane3::XY: Self
+pub const macaw::Plane3::YZ: Self
+pub const macaw::Plane3::ZX: Self
+pub fn macaw::Plane3::as_vec4(&self) -> glam::f32::sse2::vec4::Vec4
+pub fn macaw::Plane3::distance(&self, p: glam::f32::vec3::Vec3) -> f32
+pub fn macaw::Plane3::from_normal_dist(normal: glam::f32::vec3::Vec3, d: f32) -> Self
+pub fn macaw::Plane3::from_normal_point(normal: glam::f32::vec3::Vec3, point: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::Plane3::intersect_ray(&self, origin: glam::f32::vec3::Vec3, dir: glam::f32::vec3::Vec3) -> (bool, f32)
+pub fn macaw::Plane3::is_finite(&self) -> bool
+pub fn macaw::Plane3::normalized(&self) -> Self
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::Plane3
+pub fn macaw::Plane3::minimum_bytes_needed() -> usize
+pub fn macaw::Plane3::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Plane3
+pub fn macaw::Plane3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
+impl core::clone::Clone for macaw::Plane3
+pub fn macaw::Plane3::clone(&self) -> macaw::Plane3
+impl core::cmp::PartialEq for macaw::Plane3
+pub fn macaw::Plane3::eq(&self, other: &macaw::Plane3) -> bool
+impl core::fmt::Debug for macaw::Plane3
+pub fn macaw::Plane3::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::marker::Copy for macaw::Plane3
+impl core::marker::StructuralPartialEq for macaw::Plane3
+impl serde::ser::Serialize for macaw::Plane3
+pub fn macaw::Plane3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'de> serde::de::Deserialize<'de> for macaw::Plane3
+pub fn macaw::Plane3::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+pub struct macaw::Ray3
+pub macaw::Ray3::dir: glam::f32::vec3::Vec3
+pub macaw::Ray3::origin: glam::f32::vec3::Vec3
+impl macaw::Ray3
+pub const macaw::Ray3::ZERO: Self
+pub fn macaw::Ray3::closest_point_to_point(&self, point: glam::f32::vec3::Vec3) -> glam::f32::vec3::Vec3
+pub fn macaw::Ray3::closest_points(&self, other: &Self) -> (glam::f32::vec3::Vec3, glam::f32::vec3::Vec3)
+pub fn macaw::Ray3::closest_t_to_point(&self, point: glam::f32::vec3::Vec3) -> f32
+pub fn macaw::Ray3::closest_ts(&self, other: &Self) -> (f32, f32)
+pub fn macaw::Ray3::from_origin_dir(origin: glam::f32::vec3::Vec3, dir: glam::f32::vec3::Vec3) -> Self
+pub fn macaw::Ray3::intersects_plane(&self, plane: macaw::Plane3) -> glam::f32::vec3::Vec3
+pub fn macaw::Ray3::is_finite(&self) -> bool
+pub fn macaw::Ray3::normalize(&self) -> Self
+pub fn macaw::Ray3::offset_along_ray(&self, t: f32) -> Self
+pub fn macaw::Ray3::point_along(&self, t: f32) -> glam::f32::vec3::Vec3
+impl core::fmt::Debug for macaw::Ray3
+pub fn macaw::Ray3::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::ops::arith::Mul<macaw::Ray3> for glam::f32::affine3a::Affine3A
+pub type glam::f32::affine3a::Affine3A::Output = macaw::Ray3
+pub fn glam::f32::affine3a::Affine3A::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl core::ops::arith::Mul<macaw::Ray3> for glam::f32::sse2::mat4::Mat4
+pub type glam::f32::sse2::mat4::Mat4::Output = macaw::Ray3
+pub fn glam::f32::sse2::mat4::Mat4::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl core::ops::arith::Mul<macaw::Ray3> for macaw::Conformal3
+pub type macaw::Conformal3::Output = macaw::Ray3
+pub fn macaw::Conformal3::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl core::ops::arith::Mul<macaw::Ray3> for macaw::IsoTransform
+pub type macaw::IsoTransform::Output = macaw::Ray3
+pub fn macaw::IsoTransform::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::Ray3
+pub fn macaw::Ray3::minimum_bytes_needed() -> usize
+pub fn macaw::Ray3::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Ray3
+pub fn macaw::Ray3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
+impl core::clone::Clone for macaw::Ray3
+pub fn macaw::Ray3::clone(&self) -> macaw::Ray3
+impl core::cmp::PartialEq for macaw::Ray3
+pub fn macaw::Ray3::eq(&self, other: &macaw::Ray3) -> bool
+impl core::default::Default for macaw::Ray3
+pub fn macaw::Ray3::default() -> macaw::Ray3
+impl core::marker::Copy for macaw::Ray3
+impl core::marker::StructuralPartialEq for macaw::Ray3
+impl serde::ser::Serialize for macaw::Ray3
+pub fn macaw::Ray3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'de> serde::de::Deserialize<'de> for macaw::Ray3
+pub fn macaw::Ray3::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+pub trait macaw::CoordinateSystem
+pub fn macaw::CoordinateSystem::back() -> Self
+pub fn macaw::CoordinateSystem::down() -> Self
+pub fn macaw::CoordinateSystem::forward() -> Self
+pub fn macaw::CoordinateSystem::left() -> Self
+pub fn macaw::CoordinateSystem::right() -> Self
+pub fn macaw::CoordinateSystem::up() -> Self
+impl macaw::CoordinateSystem for glam::f32::vec3::Vec3
+pub fn glam::f32::vec3::Vec3::back() -> Self
+pub fn glam::f32::vec3::Vec3::down() -> Self
+pub fn glam::f32::vec3::Vec3::forward() -> Self
+pub fn glam::f32::vec3::Vec3::left() -> Self
+pub fn glam::f32::vec3::Vec3::right() -> Self
+pub fn glam::f32::vec3::Vec3::up() -> Self
+pub trait macaw::FloatExt
+pub fn macaw::FloatExt::lerp(self, other: Self, a: Self) -> Self
+pub fn macaw::FloatExt::saturate(self) -> Self
+pub fn macaw::FloatExt::step(self, value: Self) -> Self
+pub fn macaw::FloatExt::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+impl macaw::FloatExt for f32
+pub fn f32::lerp(self, other: Self, a: Self) -> Self
+pub fn f32::saturate(self) -> Self
+pub fn f32::step(self, value: Self) -> Self
+pub fn f32::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub trait macaw::QuatExt: core::marker::Sized
+pub fn macaw::QuatExt::rotate_negative_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+pub fn macaw::QuatExt::rotate_positive_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+impl macaw::QuatExt for glam::f32::sse2::quat::Quat
+pub fn glam::f32::sse2::quat::Quat::rotate_negative_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+pub fn glam::f32::sse2::quat::Quat::rotate_positive_z_towards(forward: glam::f32::vec3::Vec3, up: glam::f32::vec3::Vec3) -> core::option::Option<glam::f32::sse2::quat::Quat>
+pub trait macaw::Vec2Ext
+pub fn macaw::Vec2Ext::angle(&self) -> f32
+pub fn macaw::Vec2Ext::fract(self) -> Self
+pub fn macaw::Vec2Ext::from_angle(angle: f32) -> Self
+pub fn macaw::Vec2Ext::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn macaw::Vec2Ext::mean(self) -> f32
+pub fn macaw::Vec2Ext::saturate(self) -> Self
+pub fn macaw::Vec2Ext::step(self, value: Self) -> Self
+pub fn macaw::Vec2Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
+pub fn macaw::Vec2Ext::trunc(self) -> Self
+impl macaw::Vec2Ext for glam::f32::vec2::Vec2
+pub fn glam::f32::vec2::Vec2::angle(&self) -> f32
+pub fn glam::f32::vec2::Vec2::fract(self) -> Self
+pub fn glam::f32::vec2::Vec2::from_angle(angle: f32) -> Self
+pub fn glam::f32::vec2::Vec2::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn glam::f32::vec2::Vec2::mean(self) -> f32
+pub fn glam::f32::vec2::Vec2::saturate(self) -> Self
+pub fn glam::f32::vec2::Vec2::step(self, value: Self) -> Self
+pub fn glam::f32::vec2::Vec2::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub fn glam::f32::vec2::Vec2::trunc(self) -> Self
+pub trait macaw::Vec3Ext
+pub fn macaw::Vec3Ext::fract(self) -> Self
+pub fn macaw::Vec3Ext::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn macaw::Vec3Ext::ln(self) -> Self
+pub fn macaw::Vec3Ext::mean(self) -> f32
+pub fn macaw::Vec3Ext::reflect(self, normal: Self) -> Self
+pub fn macaw::Vec3Ext::saturate(self) -> Self
+pub fn macaw::Vec3Ext::sqrt(self) -> Self
+pub fn macaw::Vec3Ext::step(self, value: Self) -> Self
+pub fn macaw::Vec3Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
+pub fn macaw::Vec3Ext::trunc(self) -> Self
+impl macaw::Vec3Ext for glam::f32::vec3::Vec3
+pub fn glam::f32::vec3::Vec3::fract(self) -> Self
+pub fn glam::f32::vec3::Vec3::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn glam::f32::vec3::Vec3::ln(self) -> Self
+pub fn glam::f32::vec3::Vec3::mean(self) -> f32
+pub fn glam::f32::vec3::Vec3::reflect(self, normal: Self) -> Self
+pub fn glam::f32::vec3::Vec3::saturate(self) -> Self
+pub fn glam::f32::vec3::Vec3::sqrt(self) -> Self
+pub fn glam::f32::vec3::Vec3::step(self, value: Self) -> Self
+pub fn glam::f32::vec3::Vec3::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub fn glam::f32::vec3::Vec3::trunc(self) -> Self
+pub trait macaw::Vec4Ext
+pub fn macaw::Vec4Ext::fract(self) -> Self
+pub fn macaw::Vec4Ext::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn macaw::Vec4Ext::mean(self) -> f32
+pub fn macaw::Vec4Ext::sqrt(self) -> Self
+pub fn macaw::Vec4Ext::step(self, value: Self) -> Self
+pub fn macaw::Vec4Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
+pub fn macaw::Vec4Ext::to_bits(self) -> glam::u32::uvec4::UVec4
+pub fn macaw::Vec4Ext::trunc(self) -> Self
+impl macaw::Vec4Ext for glam::f32::sse2::vec4::Vec4
+pub fn glam::f32::sse2::vec4::Vec4::fract(self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::has_equal_components(self, max_abs_diff: f32) -> bool
+pub fn glam::f32::sse2::vec4::Vec4::mean(self) -> f32
+pub fn glam::f32::sse2::vec4::Vec4::sqrt(self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::step(self, value: Self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
+pub fn glam::f32::sse2::vec4::Vec4::to_bits(self) -> glam::u32::uvec4::UVec4
+pub fn glam::f32::sse2::vec4::Vec4::trunc(self) -> Self
+pub fn macaw::lerp<T>(range: core::ops::range::RangeInclusive<T>, t: f32) -> T where f32: core::ops::arith::Mul<T, Output = T>, T: core::ops::arith::Add<T, Output = T> + core::marker::Copy
+pub fn macaw::remap(x: f32, from: core::ops::range::RangeInclusive<f32>, to: core::ops::range::RangeInclusive<f32>) -> f32
+pub fn macaw::remap_clamp(x: f32, from: core::ops::range::RangeInclusive<f32>, to: core::ops::range::RangeInclusive<f32>) -> f32
+
