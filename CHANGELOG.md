@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Require Rust 1.77.0
+
 ## [0.19.1] - 2023-02-26
 
 - Upgrade `glam` from 0.22 to 0.25, see the [glam changelog](https://github.com/bitshifter/glam-rs/blob/main/CHANGELOG.md?plain=1#L8-L119).
