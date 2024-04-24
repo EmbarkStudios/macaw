@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- Require Rust 1.77.0
+- Require Rust 1.77.2
 
 ## [0.19.1] - 2023-02-26
 
