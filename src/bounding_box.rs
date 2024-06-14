@@ -34,8 +34,8 @@ impl BoundingBox {
     #[inline]
     pub fn nothing() -> Self {
         Self {
-            min: Vec3::splat(core::f32::INFINITY),
-            max: Vec3::splat(core::f32::NEG_INFINITY),
+            min: Vec3::splat(f32::INFINITY),
+            max: Vec3::splat(f32::NEG_INFINITY),
         }
     }
 
@@ -43,8 +43,8 @@ impl BoundingBox {
     #[inline]
     pub fn everything() -> Self {
         Self {
-            min: Vec3::splat(core::f32::NEG_INFINITY),
-            max: Vec3::splat(core::f32::INFINITY),
+            min: Vec3::splat(f32::NEG_INFINITY),
+            max: Vec3::splat(f32::INFINITY),
         }
     }
 
