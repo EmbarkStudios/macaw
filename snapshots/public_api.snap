@@ -167,28 +167,33 @@ pub fn macaw::BoundingBox::transform_iso(&self, m: &macaw::IsoTransform) -> Self
 pub fn macaw::BoundingBox::translated(&self, translation: glam::f32::vec3::Vec3) -> Self
 pub fn macaw::BoundingBox::union(self, other: Self) -> Self
 pub fn macaw::BoundingBox::volume(&self) -> f32
-impl core::fmt::Debug for macaw::BoundingBox
-pub fn macaw::BoundingBox::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
-impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::BoundingBox
-pub fn macaw::BoundingBox::minimum_bytes_needed() -> usize
-pub fn macaw::BoundingBox::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
-impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::BoundingBox
-pub fn macaw::BoundingBox::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 impl core::clone::Clone for macaw::BoundingBox
 pub fn macaw::BoundingBox::clone(&self) -> macaw::BoundingBox
 impl core::cmp::PartialEq for macaw::BoundingBox
 pub fn macaw::BoundingBox::eq(&self, other: &macaw::BoundingBox) -> bool
 impl core::default::Default for macaw::BoundingBox
 pub fn macaw::BoundingBox::default() -> macaw::BoundingBox
+impl core::fmt::Debug for macaw::BoundingBox
+pub fn macaw::BoundingBox::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
 impl core::marker::Copy for macaw::BoundingBox
 impl core::marker::StructuralPartialEq for macaw::BoundingBox
 impl serde::ser::Serialize for macaw::BoundingBox
 pub fn macaw::BoundingBox::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::BoundingBox
+pub fn macaw::BoundingBox::minimum_bytes_needed() -> usize
+pub fn macaw::BoundingBox::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
 impl<'de> serde::de::Deserialize<'de> for macaw::BoundingBox
 pub fn macaw::BoundingBox::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::BoundingBox
+pub fn macaw::BoundingBox::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 #[repr(transparent)] pub struct macaw::ColorRgba8(pub [u8; 4])
 impl bytemuck::pod::Pod for macaw::ColorRgba8
 impl bytemuck::zeroable::Zeroable for macaw::ColorRgba8
+impl core::clone::Clone for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::clone(&self) -> macaw::ColorRgba8
+impl core::cmp::Eq for macaw::ColorRgba8
+impl core::cmp::PartialEq for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::eq(&self, other: &macaw::ColorRgba8) -> bool
 impl core::convert::From<[f32; 4]> for macaw::ColorRgba8
 pub fn macaw::ColorRgba8::from(c: [f32; 4]) -> Self
 impl core::convert::From<[u8; 4]> for macaw::ColorRgba8
@@ -203,25 +208,20 @@ impl core::convert::From<macaw::ColorRgba8> for u32
 pub fn u32::from(c: macaw::ColorRgba8) -> Self
 impl core::convert::From<u32> for macaw::ColorRgba8
 pub fn macaw::ColorRgba8::from(c: u32) -> Self
-impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::ColorRgba8
-pub fn macaw::ColorRgba8::minimum_bytes_needed() -> usize
-pub fn macaw::ColorRgba8::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
-impl<C_, T_> speedy::utils::ZeroCopyable<C_, T_> for macaw::ColorRgba8 where [u8; 4]: speedy::utils::ZeroCopyable<C_, T_>
-impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::ColorRgba8
-pub fn macaw::ColorRgba8::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
-impl core::clone::Clone for macaw::ColorRgba8
-pub fn macaw::ColorRgba8::clone(&self) -> macaw::ColorRgba8
-impl core::cmp::Eq for macaw::ColorRgba8
-impl core::cmp::PartialEq for macaw::ColorRgba8
-pub fn macaw::ColorRgba8::eq(&self, other: &macaw::ColorRgba8) -> bool
 impl core::fmt::Debug for macaw::ColorRgba8
 pub fn macaw::ColorRgba8::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
 impl core::marker::Copy for macaw::ColorRgba8
 impl core::marker::StructuralPartialEq for macaw::ColorRgba8
 impl serde::ser::Serialize for macaw::ColorRgba8
 pub fn macaw::ColorRgba8::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::minimum_bytes_needed() -> usize
+pub fn macaw::ColorRgba8::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
 impl<'de> serde::de::Deserialize<'de> for macaw::ColorRgba8
 pub fn macaw::ColorRgba8::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+impl<C_, T_> speedy::utils::ZeroCopyable<C_, T_> for macaw::ColorRgba8 where [u8; 4]: speedy::utils::ZeroCopyable<C_, T_>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::ColorRgba8
+pub fn macaw::ColorRgba8::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 pub struct macaw::Conformal3
 pub macaw::Conformal3::rotation: glam::f32::sse2::quat::Quat
 pub macaw::Conformal3::translation_and_scale: glam::f32::sse2::vec4::Vec4
@@ -254,6 +254,10 @@ pub fn macaw::Conformal3::transform_vector3(&self, value: glam::f32::vec3::Vec3)
 pub fn macaw::Conformal3::transform_vector3a(&self, value: glam::f32::sse2::vec3a::Vec3A) -> glam::f32::sse2::vec3a::Vec3A
 pub fn macaw::Conformal3::translation(&self) -> glam::f32::vec3::Vec3
 pub fn macaw::Conformal3::translation_and_scale(&self) -> glam::f32::sse2::vec4::Vec4
+impl core::clone::Clone for macaw::Conformal3
+pub fn macaw::Conformal3::clone(&self) -> macaw::Conformal3
+impl core::cmp::PartialEq for macaw::Conformal3
+pub fn macaw::Conformal3::eq(&self, other: &macaw::Conformal3) -> bool
 impl core::convert::From<macaw::Conformal3> for glam::f32::affine3a::Affine3A
 pub fn glam::f32::affine3a::Affine3A::from(c: macaw::Conformal3) -> Self
 impl core::convert::From<macaw::Conformal3> for glam::f32::sse2::mat4::Mat4
@@ -264,6 +268,8 @@ impl core::default::Default for macaw::Conformal3
 pub fn macaw::Conformal3::default() -> Self
 impl core::fmt::Debug for macaw::Conformal3
 pub fn macaw::Conformal3::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::marker::Copy for macaw::Conformal3
+impl core::marker::StructuralPartialEq for macaw::Conformal3
 impl core::ops::arith::Mul for &macaw::Conformal3
 pub type &macaw::Conformal3::Output = macaw::Conformal3
 pub fn &macaw::Conformal3::mul(self, rhs: &macaw::Conformal3) -> macaw::Conformal3
@@ -282,21 +288,15 @@ pub fn macaw::Conformal3::mul(self, rhs: macaw::IsoTransform) -> Self
 impl core::ops::arith::Mul<macaw::Ray3> for macaw::Conformal3
 pub type macaw::Conformal3::Output = macaw::Ray3
 pub fn macaw::Conformal3::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl serde::ser::Serialize for macaw::Conformal3
+pub fn macaw::Conformal3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
 impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::Conformal3
 pub fn macaw::Conformal3::minimum_bytes_needed() -> usize
 pub fn macaw::Conformal3::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
-impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Conformal3
-pub fn macaw::Conformal3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
-impl core::clone::Clone for macaw::Conformal3
-pub fn macaw::Conformal3::clone(&self) -> macaw::Conformal3
-impl core::cmp::PartialEq for macaw::Conformal3
-pub fn macaw::Conformal3::eq(&self, other: &macaw::Conformal3) -> bool
-impl core::marker::Copy for macaw::Conformal3
-impl core::marker::StructuralPartialEq for macaw::Conformal3
-impl serde::ser::Serialize for macaw::Conformal3
-pub fn macaw::Conformal3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
 impl<'de> serde::de::Deserialize<'de> for macaw::Conformal3
 pub fn macaw::Conformal3::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Conformal3
+pub fn macaw::Conformal3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 pub struct macaw::IsoTransform
 pub macaw::IsoTransform::rotation: glam::f32::sse2::quat::Quat
 pub macaw::IsoTransform::translation: glam::f32::sse2::vec3a::Vec3A
@@ -319,6 +319,10 @@ pub fn macaw::IsoTransform::to_mat4(self) -> glam::f32::sse2::mat4::Mat4
 pub fn macaw::IsoTransform::transform_point3(&self, p: glam::f32::vec3::Vec3) -> glam::f32::vec3::Vec3
 pub fn macaw::IsoTransform::transform_vector3(&self, v: glam::f32::vec3::Vec3) -> glam::f32::vec3::Vec3
 pub fn macaw::IsoTransform::translation(&self) -> glam::f32::vec3::Vec3
+impl core::clone::Clone for macaw::IsoTransform
+pub fn macaw::IsoTransform::clone(&self) -> macaw::IsoTransform
+impl core::cmp::PartialEq for macaw::IsoTransform
+pub fn macaw::IsoTransform::eq(&self, other: &macaw::IsoTransform) -> bool
 impl core::convert::From<macaw::IsoTransform> for glam::f32::affine3a::Affine3A
 pub fn glam::f32::affine3a::Affine3A::from(iso: macaw::IsoTransform) -> Self
 impl core::convert::From<macaw::IsoTransform> for glam::f32::sse2::mat4::Mat4
@@ -329,6 +333,8 @@ impl core::default::Default for macaw::IsoTransform
 pub fn macaw::IsoTransform::default() -> Self
 impl core::fmt::Debug for macaw::IsoTransform
 pub fn macaw::IsoTransform::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::marker::Copy for macaw::IsoTransform
+impl core::marker::StructuralPartialEq for macaw::IsoTransform
 impl core::ops::arith::Mul for &macaw::IsoTransform
 pub type &macaw::IsoTransform::Output = macaw::IsoTransform
 pub fn &macaw::IsoTransform::mul(self, rhs: &macaw::IsoTransform) -> macaw::IsoTransform
@@ -359,21 +365,15 @@ pub fn macaw::Conformal3::mul(self, rhs: macaw::IsoTransform) -> Self
 impl core::ops::arith::Mul<macaw::Ray3> for macaw::IsoTransform
 pub type macaw::IsoTransform::Output = macaw::Ray3
 pub fn macaw::IsoTransform::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl serde::ser::Serialize for macaw::IsoTransform
+pub fn macaw::IsoTransform::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
 impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::IsoTransform
 pub fn macaw::IsoTransform::minimum_bytes_needed() -> usize
 pub fn macaw::IsoTransform::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
-impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::IsoTransform
-pub fn macaw::IsoTransform::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
-impl core::clone::Clone for macaw::IsoTransform
-pub fn macaw::IsoTransform::clone(&self) -> macaw::IsoTransform
-impl core::cmp::PartialEq for macaw::IsoTransform
-pub fn macaw::IsoTransform::eq(&self, other: &macaw::IsoTransform) -> bool
-impl core::marker::Copy for macaw::IsoTransform
-impl core::marker::StructuralPartialEq for macaw::IsoTransform
-impl serde::ser::Serialize for macaw::IsoTransform
-pub fn macaw::IsoTransform::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
 impl<'de> serde::de::Deserialize<'de> for macaw::IsoTransform
 pub fn macaw::IsoTransform::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::IsoTransform
+pub fn macaw::IsoTransform::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 pub struct macaw::MeshGen
 pub macaw::MeshGen::indices: alloc::vec::Vec<u32>
 pub macaw::MeshGen::normals: alloc::vec::Vec<glam::f32::vec3::Vec3>
@@ -399,11 +399,6 @@ pub fn macaw::Plane3::from_normal_point(normal: glam::f32::vec3::Vec3, point: gl
 pub fn macaw::Plane3::intersect_ray(&self, origin: glam::f32::vec3::Vec3, dir: glam::f32::vec3::Vec3) -> (bool, f32)
 pub fn macaw::Plane3::is_finite(&self) -> bool
 pub fn macaw::Plane3::normalized(&self) -> Self
-impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::Plane3
-pub fn macaw::Plane3::minimum_bytes_needed() -> usize
-pub fn macaw::Plane3::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
-impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Plane3
-pub fn macaw::Plane3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 impl core::clone::Clone for macaw::Plane3
 pub fn macaw::Plane3::clone(&self) -> macaw::Plane3
 impl core::cmp::PartialEq for macaw::Plane3
@@ -414,8 +409,13 @@ impl core::marker::Copy for macaw::Plane3
 impl core::marker::StructuralPartialEq for macaw::Plane3
 impl serde::ser::Serialize for macaw::Plane3
 pub fn macaw::Plane3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
+impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::Plane3
+pub fn macaw::Plane3::minimum_bytes_needed() -> usize
+pub fn macaw::Plane3::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
 impl<'de> serde::de::Deserialize<'de> for macaw::Plane3
 pub fn macaw::Plane3::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Plane3
+pub fn macaw::Plane3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 pub struct macaw::Ray3
 pub macaw::Ray3::dir: glam::f32::vec3::Vec3
 pub macaw::Ray3::origin: glam::f32::vec3::Vec3
@@ -431,8 +431,16 @@ pub fn macaw::Ray3::is_finite(&self) -> bool
 pub fn macaw::Ray3::normalize(&self) -> Self
 pub fn macaw::Ray3::offset_along_ray(&self, t: f32) -> Self
 pub fn macaw::Ray3::point_along(&self, t: f32) -> glam::f32::vec3::Vec3
+impl core::clone::Clone for macaw::Ray3
+pub fn macaw::Ray3::clone(&self) -> macaw::Ray3
+impl core::cmp::PartialEq for macaw::Ray3
+pub fn macaw::Ray3::eq(&self, other: &macaw::Ray3) -> bool
+impl core::default::Default for macaw::Ray3
+pub fn macaw::Ray3::default() -> macaw::Ray3
 impl core::fmt::Debug for macaw::Ray3
 pub fn macaw::Ray3::fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result
+impl core::marker::Copy for macaw::Ray3
+impl core::marker::StructuralPartialEq for macaw::Ray3
 impl core::ops::arith::Mul<macaw::Ray3> for glam::f32::affine3a::Affine3A
 pub type glam::f32::affine3a::Affine3A::Output = macaw::Ray3
 pub fn glam::f32::affine3a::Affine3A::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
@@ -445,23 +453,15 @@ pub fn macaw::Conformal3::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
 impl core::ops::arith::Mul<macaw::Ray3> for macaw::IsoTransform
 pub type macaw::IsoTransform::Output = macaw::Ray3
 pub fn macaw::IsoTransform::mul(self, rhs: macaw::Ray3) -> macaw::Ray3
+impl serde::ser::Serialize for macaw::Ray3
+pub fn macaw::Ray3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
 impl<'a_, C_: speedy::context::Context> speedy::readable::Readable<'a_, C_> for macaw::Ray3
 pub fn macaw::Ray3::minimum_bytes_needed() -> usize
 pub fn macaw::Ray3::read_from<R_: speedy::reader::Reader<'a_, C_>>(_reader_: &mut R_) -> core::result::Result<Self, <C_ as speedy::context::Context>::Error>
-impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Ray3
-pub fn macaw::Ray3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
-impl core::clone::Clone for macaw::Ray3
-pub fn macaw::Ray3::clone(&self) -> macaw::Ray3
-impl core::cmp::PartialEq for macaw::Ray3
-pub fn macaw::Ray3::eq(&self, other: &macaw::Ray3) -> bool
-impl core::default::Default for macaw::Ray3
-pub fn macaw::Ray3::default() -> macaw::Ray3
-impl core::marker::Copy for macaw::Ray3
-impl core::marker::StructuralPartialEq for macaw::Ray3
-impl serde::ser::Serialize for macaw::Ray3
-pub fn macaw::Ray3::serialize<__S>(&self, __serializer: __S) -> core::result::Result<<__S as serde::ser::Serializer>::Ok, <__S as serde::ser::Serializer>::Error> where __S: serde::ser::Serializer
 impl<'de> serde::de::Deserialize<'de> for macaw::Ray3
 pub fn macaw::Ray3::deserialize<__D>(__deserializer: __D) -> core::result::Result<Self, <__D as serde::de::Deserializer>::Error> where __D: serde::de::Deserializer<'de>
+impl<C_: speedy::context::Context> speedy::writable::Writable<C_> for macaw::Ray3
+pub fn macaw::Ray3::write_to<T_: core::marker::Sized + speedy::writer::Writer<C_>>(&self, _writer_: &mut T_) -> core::result::Result<(), <C_ as speedy::context::Context>::Error>
 pub trait macaw::CoordinateSystem
 pub fn macaw::CoordinateSystem::back() -> Self
 pub fn macaw::CoordinateSystem::down() -> Self
@@ -555,4 +555,3 @@ pub fn glam::f32::sse2::vec4::Vec4::trunc(self) -> Self
 pub fn macaw::lerp<T>(range: core::ops::range::RangeInclusive<T>, t: f32) -> T where f32: core::ops::arith::Mul<T, Output = T>, T: core::ops::arith::Add<T, Output = T> + core::marker::Copy
 pub fn macaw::remap(x: f32, from: core::ops::range::RangeInclusive<f32>, to: core::ops::range::RangeInclusive<f32>) -> f32
 pub fn macaw::remap_clamp(x: f32, from: core::ops::range::RangeInclusive<f32>, to: core::ops::range::RangeInclusive<f32>) -> f32
-
