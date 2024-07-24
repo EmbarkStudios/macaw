@@ -119,6 +119,7 @@ pub trait macaw::prelude::Vec4Ext
 pub fn macaw::prelude::Vec4Ext::fract(self) -> Self
 pub fn macaw::prelude::Vec4Ext::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn macaw::prelude::Vec4Ext::mean(self) -> f32
+pub fn macaw::prelude::Vec4Ext::sin(self) -> Self
 pub fn macaw::prelude::Vec4Ext::sqrt(self) -> Self
 pub fn macaw::prelude::Vec4Ext::step(self, value: Self) -> Self
 pub fn macaw::prelude::Vec4Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
@@ -128,6 +129,7 @@ impl macaw::Vec4Ext for glam::f32::sse2::vec4::Vec4
 pub fn glam::f32::sse2::vec4::Vec4::fract(self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn glam::f32::sse2::vec4::Vec4::mean(self) -> f32
+pub fn glam::f32::sse2::vec4::Vec4::sin(self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::sqrt(self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::step(self, value: Self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
@@ -538,6 +540,7 @@ pub trait macaw::Vec4Ext
 pub fn macaw::Vec4Ext::fract(self) -> Self
 pub fn macaw::Vec4Ext::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn macaw::Vec4Ext::mean(self) -> f32
+pub fn macaw::Vec4Ext::sin(self) -> Self
 pub fn macaw::Vec4Ext::sqrt(self) -> Self
 pub fn macaw::Vec4Ext::step(self, value: Self) -> Self
 pub fn macaw::Vec4Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
@@ -547,6 +550,7 @@ impl macaw::Vec4Ext for glam::f32::sse2::vec4::Vec4
 pub fn glam::f32::sse2::vec4::Vec4::fract(self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn glam::f32::sse2::vec4::Vec4::mean(self) -> f32
+pub fn glam::f32::sse2::vec4::Vec4::sin(self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::sqrt(self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::step(self, value: Self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self

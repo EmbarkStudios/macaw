@@ -29,6 +29,10 @@ pub trait Vec4Ext {
     #[must_use]
     fn fract(self) -> Self;
 
+    /// Return only the sine of each component.
+    #[must_use]
+    fn sin(self) -> Self;
+
     /// Return the square root of each component.
     #[must_use]
     fn sqrt(self) -> Self;
@@ -83,6 +87,11 @@ impl Vec4Ext for Vec4 {
             self.z.fract(),
             self.w.fract(),
         )
+    }
+
+    #[inline]
+    fn sin(self) -> Self {
+        vec4(self.x.sin(), self.y.sin(), self.z.sin(), self.w.sin())
     }
 
     fn sqrt(self) -> Self {
