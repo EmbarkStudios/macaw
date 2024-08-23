@@ -58,11 +58,13 @@ pub use macaw::prelude::Vec2Swizzles
 pub use macaw::prelude::Vec3Swizzles
 pub use macaw::prelude::Vec4Swizzles
 pub trait macaw::prelude::FloatExt
+pub fn macaw::prelude::FloatExt::eerp(self, other: Self, a: Self) -> Self
 pub fn macaw::prelude::FloatExt::lerp(self, other: Self, a: Self) -> Self
 pub fn macaw::prelude::FloatExt::saturate(self) -> Self
 pub fn macaw::prelude::FloatExt::step(self, value: Self) -> Self
 pub fn macaw::prelude::FloatExt::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
 impl macaw::FloatExt for f32
+pub fn f32::eerp(self, other: Self, a: Self) -> Self
 pub fn f32::lerp(self, other: Self, a: Self) -> Self
 pub fn f32::saturate(self) -> Self
 pub fn f32::step(self, value: Self) -> Self
@@ -94,6 +96,7 @@ pub fn glam::f32::vec2::Vec2::step(self, value: Self) -> Self
 pub fn glam::f32::vec2::Vec2::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
 pub fn glam::f32::vec2::Vec2::trunc(self) -> Self
 pub trait macaw::prelude::Vec3Ext
+pub fn macaw::prelude::Vec3Ext::eerp(self, other: Self, a: f32) -> Self
 pub fn macaw::prelude::Vec3Ext::fract(self) -> Self
 pub fn macaw::prelude::Vec3Ext::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn macaw::prelude::Vec3Ext::ln(self) -> Self
@@ -105,6 +108,7 @@ pub fn macaw::prelude::Vec3Ext::step(self, value: Self) -> Self
 pub fn macaw::prelude::Vec3Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
 pub fn macaw::prelude::Vec3Ext::trunc(self) -> Self
 impl macaw::Vec3Ext for glam::f32::vec3::Vec3
+pub fn glam::f32::vec3::Vec3::eerp(self, other: Self, a: f32) -> Self
 pub fn glam::f32::vec3::Vec3::fract(self) -> Self
 pub fn glam::f32::vec3::Vec3::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn glam::f32::vec3::Vec3::ln(self) -> Self
@@ -479,11 +483,13 @@ pub fn glam::f32::vec3::Vec3::left() -> Self
 pub fn glam::f32::vec3::Vec3::right() -> Self
 pub fn glam::f32::vec3::Vec3::up() -> Self
 pub trait macaw::FloatExt
+pub fn macaw::FloatExt::eerp(self, other: Self, a: Self) -> Self
 pub fn macaw::FloatExt::lerp(self, other: Self, a: Self) -> Self
 pub fn macaw::FloatExt::saturate(self) -> Self
 pub fn macaw::FloatExt::step(self, value: Self) -> Self
 pub fn macaw::FloatExt::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
 impl macaw::FloatExt for f32
+pub fn f32::eerp(self, other: Self, a: Self) -> Self
 pub fn f32::lerp(self, other: Self, a: Self) -> Self
 pub fn f32::saturate(self) -> Self
 pub fn f32::step(self, value: Self) -> Self
@@ -515,6 +521,7 @@ pub fn glam::f32::vec2::Vec2::step(self, value: Self) -> Self
 pub fn glam::f32::vec2::Vec2::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
 pub fn glam::f32::vec2::Vec2::trunc(self) -> Self
 pub trait macaw::Vec3Ext
+pub fn macaw::Vec3Ext::eerp(self, other: Self, a: f32) -> Self
 pub fn macaw::Vec3Ext::fract(self) -> Self
 pub fn macaw::Vec3Ext::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn macaw::Vec3Ext::ln(self) -> Self
@@ -526,6 +533,7 @@ pub fn macaw::Vec3Ext::step(self, value: Self) -> Self
 pub fn macaw::Vec3Ext::step_select(self, value: Self, tru: Self, fals: Self) -> Self
 pub fn macaw::Vec3Ext::trunc(self) -> Self
 impl macaw::Vec3Ext for glam::f32::vec3::Vec3
+pub fn glam::f32::vec3::Vec3::eerp(self, other: Self, a: f32) -> Self
 pub fn glam::f32::vec3::Vec3::fract(self) -> Self
 pub fn glam::f32::vec3::Vec3::has_equal_components(self, max_abs_diff: f32) -> bool
 pub fn glam::f32::vec3::Vec3::ln(self) -> Self
@@ -556,6 +564,10 @@ pub fn glam::f32::sse2::vec4::Vec4::step(self, value: Self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self
 pub fn glam::f32::sse2::vec4::Vec4::to_bits(self) -> glam::u32::uvec4::UVec4
 pub fn glam::f32::sse2::vec4::Vec4::trunc(self) -> Self
+pub fn macaw::exp2_fast(p: f32) -> f32
 pub fn macaw::lerp<T>(range: core::ops::range::RangeInclusive<T>, t: f32) -> T where f32: core::ops::arith::Mul<T, Output = T>, T: core::ops::arith::Add<T, Output = T> + core::marker::Copy
+pub fn macaw::ln_fast(x: f32) -> f32
+pub fn macaw::log2_fast(x: f32) -> f32
+pub fn macaw::powf_fast(x: f32, p: f32) -> f32
 pub fn macaw::remap(x: f32, from: core::ops::range::RangeInclusive<f32>, to: core::ops::range::RangeInclusive<f32>) -> f32
 pub fn macaw::remap_clamp(x: f32, from: core::ops::range::RangeInclusive<f32>, to: core::ops::range::RangeInclusive<f32>) -> f32

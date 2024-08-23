@@ -50,6 +50,14 @@ pub trait Vec3Ext {
     /// Returns true if all components of the vector is the same within an absolute difference of `max_abs_diff`
     #[must_use]
     fn has_equal_components(self, max_abs_diff: f32) -> bool;
+
+    /// Performs a an exponential interpolation between `self` and `other` using `a` to weight between them.
+    /// The return value is computed as `self.powf(1−a) * other.powf(a)`.
+    ///
+    /// This means that the interpolation is linear in the log domain, so it is useful when interpolating
+    /// values that will be multiplied, such as scaling factors.
+    #[must_use]
+    fn eerp(self, other: Self, a: f32) -> Self;
 }
 
 impl Vec3Ext for Vec3 {
@@ -59,6 +67,7 @@ impl Vec3Ext for Vec3 {
         vec3(self.x.trunc(), self.y.trunc(), self.z.trunc())
     }
 
+    #[inline]
     fn step(self, value: Self) -> Self {
         vec3(
             self.x.step(value.x),
@@ -67,6 +76,7 @@ impl Vec3Ext for Vec3 {
         )
     }
 
+    #[inline]
     fn step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self {
         vec3(
             self.x.step_select(value.x, less.x, greater_or_equal.x),
@@ -75,34 +85,50 @@ impl Vec3Ext for Vec3 {
         )
     }
 
+    #[inline]
     fn fract(self) -> Self {
         vec3(self.x.fract(), self.y.fract(), self.z.fract())
     }
 
+    #[inline]
     fn saturate(self) -> Self {
         vec3(self.x.saturate(), self.y.saturate(), self.z.saturate())
     }
 
+    #[inline]
     fn sqrt(self) -> Self {
         vec3(self.x.sqrt(), self.y.sqrt(), self.z.sqrt())
     }
 
+    #[inline]
     fn ln(self) -> Self {
         vec3(self.x.ln(), self.y.ln(), self.z.ln())
     }
 
+    #[inline]
     fn reflect(self, normal: Self) -> Self {
         self - 2.0 * normal * self.dot(normal)
     }
 
+    #[inline]
     fn mean(self) -> f32 {
         (self.x + self.y + self.z) / 3.0
     }
 
+    #[inline]
     fn has_equal_components(self, max_abs_diff: f32) -> bool {
         (self.x - self.y).abs() < max_abs_diff
             && (self.y - self.z).abs() < max_abs_diff
             && (self.x - self.z).abs() < max_abs_diff
+    }
+
+    #[inline(always)]
+    fn eerp(self, other: Self, a: f32) -> Self {
+        Self::new(
+            self.x.eerp(other.x, a),
+            self.y.eerp(other.y, a),
+            self.z.eerp(other.z, a),
+        )
     }
 }
 
