@@ -2,6 +2,8 @@ use super::prelude::*;
 use super::vec3;
 use super::Vec3;
 
+use glam::vec3a;
+use glam::Vec3A;
 #[cfg(target_arch = "spirv")]
 use num_traits::Float;
 
@@ -103,6 +105,78 @@ impl Vec3Ext for Vec3 {
     #[inline]
     fn ln(self) -> Self {
         vec3(self.x.ln(), self.y.ln(), self.z.ln())
+    }
+
+    #[inline]
+    fn reflect(self, normal: Self) -> Self {
+        self - 2.0 * normal * self.dot(normal)
+    }
+
+    #[inline]
+    fn mean(self) -> f32 {
+        (self.x + self.y + self.z) / 3.0
+    }
+
+    #[inline]
+    fn has_equal_components(self, max_abs_diff: f32) -> bool {
+        (self.x - self.y).abs() < max_abs_diff
+            && (self.y - self.z).abs() < max_abs_diff
+            && (self.x - self.z).abs() < max_abs_diff
+    }
+
+    #[inline(always)]
+    fn eerp(self, other: Self, a: f32) -> Self {
+        Self::new(
+            self.x.eerp(other.x, a),
+            self.y.eerp(other.y, a),
+            self.z.eerp(other.z, a),
+        )
+    }
+}
+
+impl Vec3Ext for Vec3A {
+    /// For element `i` of `self`, return `v[i].trunc()`
+    #[inline]
+    fn trunc(self) -> Self {
+        vec3a(self.x.trunc(), self.y.trunc(), self.z.trunc())
+    }
+
+    #[inline]
+    fn step(self, value: Self) -> Self {
+        vec3a(
+            self.x.step(value.x),
+            self.y.step(value.y),
+            self.z.step(value.z),
+        )
+    }
+
+    #[inline]
+    fn step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self {
+        vec3a(
+            self.x.step_select(value.x, less.x, greater_or_equal.x),
+            self.y.step_select(value.y, less.y, greater_or_equal.y),
+            self.z.step_select(value.z, less.z, greater_or_equal.z),
+        )
+    }
+
+    #[inline]
+    fn fract(self) -> Self {
+        vec3a(self.x.fract(), self.y.fract(), self.z.fract())
+    }
+
+    #[inline]
+    fn saturate(self) -> Self {
+        vec3a(self.x.saturate(), self.y.saturate(), self.z.saturate())
+    }
+
+    #[inline]
+    fn sqrt(self) -> Self {
+        vec3a(self.x.sqrt(), self.y.sqrt(), self.z.sqrt())
+    }
+
+    #[inline]
+    fn ln(self) -> Self {
+        vec3a(self.x.ln(), self.y.ln(), self.z.ln())
     }
 
     #[inline]

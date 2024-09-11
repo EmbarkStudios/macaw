@@ -167,7 +167,7 @@ impl IsoTransform {
         let inv_rotation = self.rotation.inverse();
         Self {
             rotation: inv_rotation,
-            translation: inv_rotation * -self.translation,
+            translation: -(inv_rotation * self.translation),
         }
     }
 
@@ -304,6 +304,7 @@ impl core::fmt::Debug for IsoTransform {
                     axis[2],
                 ),
             )
+            .field("rotation(raw)", &self.rotation)
             .finish()
     }
 }

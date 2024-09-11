@@ -33,13 +33,12 @@ harness = false
 name = "conformal3"
 
 [dependencies]
-# avoid adding more dependencies here!
-bytemuck = { version = "1.9", optional = true }
-glam = { version = "0.25", default-features = false }
+bytemuck = { workspace = true, optional = true }
+glam = { workspace = true }
 serde = { version = "1.0", default-features = false, optional = true, features = [
     "derive",
 ] }
-speedy = { version = "0.8", optional = true, features = ["glam"] }
+speedy = { workspace = true, optional = true, features = ["glam"] }
 
 [target.'cfg(target_arch = "spirv")'.dependencies]
 num-traits = { version = "0.2.14", default-features = false, features = [
@@ -54,7 +53,7 @@ tiny-bench = "0.3.0"
 # miri interpreter doesn't support SIMD, so auto-disable it in glam.
 # https://github.com/rust-lang/miri/issues/662
 [target.'cfg(miri)'.dependencies]
-glam = { version = "0.25", default-features = false, features = [
+glam = { workspace = true, default-features = false, features = [
     "scalar-math",
 ] }
 
@@ -62,7 +61,8 @@ glam = { version = "0.25", default-features = false, features = [
 default = ["std"]
 libm = ["glam/libm"]
 std = ["glam/std"]
-with_bytemuck = ["bytemuck", "glam/bytemuck"]
+mint = ["glam/mint"]
+bytemuck = ["dep:bytemuck", "glam/bytemuck"]
 with_serde = ["serde", "glam/serde"]
 with_speedy = ["speedy"]
 

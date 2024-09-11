@@ -3,12 +3,15 @@
 #![cfg_attr(target_arch = "spirv", feature(repr_simd, core_intrinsics))]
 #![cfg_attr(target_arch = "spirv", no_std)]
 
+mod affine3;
 mod bounding_box;
 #[cfg(not(target_arch = "spirv"))]
 mod color_rgba8;
 mod conformal;
+mod dual_quat;
 mod float_ext;
 mod iso_transform;
+mod mat3_ext;
 #[cfg(not(target_arch = "spirv"))]
 mod mesh_gen;
 mod plane3;
@@ -20,10 +23,13 @@ mod vec2_ext;
 mod vec3_ext;
 mod vec4_ext;
 
+pub use self::affine3::*;
 pub use self::bounding_box::*;
 pub use self::conformal::*;
+pub use self::dual_quat::*;
 pub use self::float_ext::*;
 pub use self::iso_transform::*;
+pub use self::mat3_ext::*;
 pub use self::plane3::*;
 pub use self::ray3::*;
 pub use self::utils::*;

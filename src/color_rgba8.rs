@@ -23,9 +23,9 @@
 //! For instance `[1.0, 0.0, 0.0, 0.0]` is red without any opaquness.
 //! So it won't cover whatever is behind it, but will ADD to it.
 
-#[cfg(feature = "with_bytemuck")]
+#[cfg(feature = "bytemuck")]
 use bytemuck::Pod;
-#[cfg(feature = "with_bytemuck")]
+#[cfg(feature = "bytemuck")]
 use bytemuck::Zeroable;
 
 use crate::Vec4;
@@ -68,11 +68,11 @@ impl From<ColorRgba8> for [u8; 4] {
     }
 }
 
-#[cfg(feature = "with_bytemuck")]
+#[cfg(feature = "bytemuck")]
 // SAFETY: A `[u8; N]` is always Pod, and this is a transparent wrapper.
 unsafe impl Pod for ColorRgba8 {}
 
-#[cfg(feature = "with_bytemuck")]
+#[cfg(feature = "bytemuck")]
 // SAFETY: A `[u8; N]` is always Zeroable, and this is a transparent wrapper.
 unsafe impl Zeroable for ColorRgba8 {}
 
