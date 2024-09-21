@@ -1,3 +1,4 @@
+use core::f32::consts::LOG2_E;
 use core::ops::Add;
 use core::ops::Mul;
 use core::ops::RangeInclusive;
@@ -59,6 +60,14 @@ pub fn remap_clamp(x: f32, from: RangeInclusive<f32>, to: RangeInclusive<f32>) -
     }
 }
 
+/// Aka "lerp smoothing". Meant to be called per-frame, to interpolate between
+/// `curr` and `target`. `decay_rate` controls the speed of interpolation, with a usable
+/// range of around 1.0 and 25.0, from slow to fast. `dt` is the current frame time.
+#[inline(always)]
+pub fn exp_decay(curr: f32, target: f32, decay_rate: f32, dt: f32) -> f32 {
+    target + (curr - target) * exp_fast(-decay_rate * dt)
+}
+
 /// Fast approximation of base 2 logarithm.
 #[inline(always)]
 pub fn log2_fast(x: f32) -> f32 {
@@ -73,6 +82,12 @@ pub fn log2_fast(x: f32) -> f32 {
 #[inline(always)]
 pub fn ln_fast(x: f32) -> f32 {
     core::f32::consts::LN_2 * log2_fast(x)
+}
+
+/// Fast approximation of e^x
+#[inline(always)]
+pub fn exp_fast(p: f32) -> f32 {
+    exp2_fast(p * LOG2_E)
 }
 
 /// Fast approximation of exponentiating 2 to a floating point power.
