@@ -216,7 +216,6 @@ impl Conformal3 {
     }
 
     /// Truncates a `Conformal3` to an `IsoTransform` (rotation, translation).
-
     pub fn to_iso_transform(self) -> IsoTransform {
         IsoTransform::from_rotation_translation(self.rotation, self.translation())
     }
