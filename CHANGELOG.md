@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
+## [0.20.0] - 2025-04-22
 
 - Require Rust 1.82.0
 - Change `with_bytemuck` feature to just `bytemuck`
