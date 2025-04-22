@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Require Rust 1.82.0
 - Change `with_bytemuck` feature to just `bytemuck`
+- Add `DualQuat` implementation
+- Add `UNorm8` and `UNorm16` fixed-point normalized types
+- Various small additions and fixes in extension traits
 
 ## [0.19.1] - 2023-02-26
 
