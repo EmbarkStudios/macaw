@@ -52,11 +52,7 @@ pub fn remap_clamp(x: f32, from: RangeInclusive<f32>, to: RangeInclusive<f32>) -
     } else {
         let t = (x - from.start()) / (from.end() - from.start());
         // Ensure no numerical inaccurcies sneak in:
-        if 1.0 <= t {
-            *to.end()
-        } else {
-            lerp(to, t)
-        }
+        if 1.0 <= t { *to.end() } else { lerp(to, t) }
     }
 }
 

@@ -1,8 +1,8 @@
+use super::UVec4;
+use super::Vec4;
 use super::prelude::*;
 use super::uvec4;
 use super::vec4;
-use super::UVec4;
-use super::Vec4;
 
 #[cfg(target_arch = "spirv")]
 use num_traits::Float;

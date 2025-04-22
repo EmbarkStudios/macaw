@@ -83,11 +83,7 @@ impl Plane3 {
             (false, 0.0)
         } else {
             let t = -(origin.dot(self.normal) + self.d) / denom;
-            if t < 0.0 {
-                (false, t)
-            } else {
-                (true, t)
-            }
+            if t < 0.0 { (false, t) } else { (true, t) }
         }
     }
 

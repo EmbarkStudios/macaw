@@ -35,20 +35,12 @@ pub trait FloatExt {
 impl FloatExt for f32 {
     #[inline(always)]
     fn step(self, value: Self) -> Self {
-        if value < self {
-            0.0
-        } else {
-            1.0
-        }
+        if value < self { 0.0 } else { 1.0 }
     }
 
     #[inline(always)]
     fn step_select(self, value: Self, less: Self, greater_or_equal: Self) -> Self {
-        if value < self {
-            less
-        } else {
-            greater_or_equal
-        }
+        if value < self { less } else { greater_or_equal }
     }
 
     #[inline(always)]

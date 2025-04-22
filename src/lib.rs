@@ -62,28 +62,19 @@ pub mod prelude {
 
 // Re-export main glam types.
 // i32
-pub use glam::ivec2;
-pub use glam::ivec3;
 pub use glam::IVec2;
 pub use glam::IVec3;
 pub use glam::IVec4;
+pub use glam::ivec2;
+pub use glam::ivec3;
 // u32
-pub use glam::uvec2;
-pub use glam::uvec3;
-pub use glam::uvec4;
 pub use glam::UVec2;
 pub use glam::UVec3;
 pub use glam::UVec4;
+pub use glam::uvec2;
+pub use glam::uvec3;
+pub use glam::uvec4;
 // f32
-pub use glam::mat2;
-pub use glam::mat3;
-pub use glam::mat3a;
-pub use glam::mat4;
-pub use glam::quat;
-pub use glam::vec2;
-pub use glam::vec3;
-pub use glam::vec3a;
-pub use glam::vec4;
 pub use glam::Affine3A;
 pub use glam::Mat2;
 pub use glam::Mat3;
@@ -94,14 +85,16 @@ pub use glam::Vec2;
 pub use glam::Vec3;
 pub use glam::Vec3A;
 pub use glam::Vec4;
+pub use glam::mat2;
+pub use glam::mat3;
+pub use glam::mat3a;
+pub use glam::mat4;
+pub use glam::quat;
+pub use glam::vec2;
+pub use glam::vec3;
+pub use glam::vec3a;
+pub use glam::vec4;
 // f64
-pub use glam::dmat2;
-pub use glam::dmat3;
-pub use glam::dmat4;
-pub use glam::dquat;
-pub use glam::dvec2;
-pub use glam::dvec3;
-pub use glam::dvec4;
 pub use glam::DAffine2;
 pub use glam::DAffine3;
 pub use glam::DMat2;
@@ -111,6 +104,13 @@ pub use glam::DQuat;
 pub use glam::DVec2;
 pub use glam::DVec3;
 pub use glam::DVec4;
+pub use glam::dmat2;
+pub use glam::dmat3;
+pub use glam::dmat4;
+pub use glam::dquat;
+pub use glam::dvec2;
+pub use glam::dvec3;
+pub use glam::dvec4;
 // other
 pub use glam::EulerRot;
 pub use glam::Vec2Swizzles;

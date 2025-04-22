@@ -1,6 +1,6 @@
+use super::Vec2;
 use super::prelude::*;
 use super::vec2;
-use super::Vec2;
 
 #[cfg(target_arch = "spirv")]
 use num_traits::Float;
