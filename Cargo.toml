@@ -7,6 +7,9 @@ keywords = ["gamedev", "math"]
 categories = ["game-engines"]
 authors = ["Embark Studios <opensource@embark-studios.com>"]
 edition = "2024"
+documentation = "https://docs.rs/macaw"
+homepage = "https://github.com/EmbarkStudios/macaw"
+repository = "https://github.com/EmbarkStudios/macaw"
 # note that since macaw is built for vulkan as well, the nightly version used
 # when compiling shaders might be "behind" the current stable version failing
 # compilation
