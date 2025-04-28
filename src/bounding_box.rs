@@ -3,9 +3,9 @@ use super::Vec3;
 
 /// A 3-dimensional axis-aligned bounding box
 #[derive(Clone, Copy, Default, PartialEq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
-#[cfg_attr(feature = "with_speedy", allow(clippy::manual_slice_size_calculation))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "speedy", allow(clippy::manual_slice_size_calculation))]
 pub struct BoundingBox {
     /// Bounding box minimum (inclusive).
     pub min: Vec3,

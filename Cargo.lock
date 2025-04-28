@@ -30,9 +30,9 @@ dependencies = [
 
 [[package]]
 name = "glam"
-version = "0.25.0"
+version = "0.30.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "151665d9be52f9bb40fc7966565d39666f2d1e69233571b71b87791c7e0528b3"
+checksum = "d0e9b6647e9b41d3a5ef02964c6be01311a7f2472fea40595c635c6d046c259e"
 dependencies = [
  "bytemuck",
  "libm",
@@ -127,7 +127,6 @@ version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "da1992073f0e55aab599f4483c460598219b4f9ff0affa124b33580ab511e25a"
 dependencies = [
- "glam",
  "memoffset",
  "speedy-derive",
 ]

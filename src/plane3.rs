@@ -11,8 +11,8 @@ use crate::Vec3;
 /// A point `point` is on the plane when `plane.normal.dot(point) + plane.d = 0`.
 #[derive(Copy, Clone, PartialEq)]
 #[cfg_attr(not(target_arch = "spirv"), derive(Debug))]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 pub struct Plane3 {
     /// Normal vector
     pub normal: Vec3,

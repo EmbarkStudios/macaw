@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
+
+- Change `with_speedy` feature to `speedy`
+- Change `with_serde` feature to `serde`
+- Update to `glam` 0.30
+
 ## [0.20.0] - 2025-04-22
 
 - Require Rust 1.82.0

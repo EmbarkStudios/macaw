@@ -118,11 +118,11 @@ name = "conformal3"
 
 [dependencies]
 bytemuck = { version = "1", optional = true }
-glam = { version = "0.25" }
+glam = { version = "0.30" }
 serde = { version = "1.0", default-features = false, optional = true, features = [
     "derive",
 ] }
-speedy = { version = "0.8.7", optional = true, features = ["glam"] }
+speedy = { version = "0.8", optional = true }
 
 [target.'cfg(target_arch = "spirv")'.dependencies]
 num-traits = { version = "0.2.14", default-features = false, features = [
@@ -138,8 +138,8 @@ libm = ["glam/libm"]
 std = ["glam/std"]
 mint = ["glam/mint"]
 bytemuck = ["dep:bytemuck", "glam/bytemuck", "bytemuck/derive"]
-with_serde = ["serde", "glam/serde"]
-with_speedy = ["speedy"]
+serde = ["dep:serde", "glam/serde"]
+speedy = ["dep:speedy", "glam/speedy"]
 
 # enable additional checks if debug assertions are enabled
 debug_assert = ["glam/debug-glam-assert"]

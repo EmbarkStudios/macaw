@@ -6,8 +6,8 @@ use crate::Vec3;
 /// where t is a non-negative floating point value, which represents the distance
 /// along the ray.
 #[derive(Clone, Copy, Default, PartialEq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 pub struct Ray3 {
     /// Start of the ray
     pub origin: Vec3,

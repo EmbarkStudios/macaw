@@ -37,8 +37,8 @@ impl Affine3Storage {
 /// repr calculated on the CPU and GPU, so you still need to use [`Affine3Storage`] as a
 /// intermediary.
 #[derive(Clone, Copy, PartialEq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 #[cfg_attr(
     feature = "bytemuck",
     derive(bytemuck::NoUninit, bytemuck::AnyBitPattern)

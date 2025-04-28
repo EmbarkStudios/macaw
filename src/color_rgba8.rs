@@ -36,8 +36,8 @@ use crate::Vec4;
 /// Otherwise prefer a [`Vec4`] linear space in the [0-1] range,
 /// as that allows you to add and multiply colors.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 #[repr(transparent)]
 pub struct ColorRgba8(pub [u8; 4]);
 

@@ -11,8 +11,8 @@ use glam::Vec3A;
 /// The operations are applied right-to-left, so when transforming a point
 /// it will first be rotated and finally translated.
 #[derive(Clone, Copy, PartialEq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 pub struct IsoTransform {
     /// Normalized
     pub rotation: Quat,

@@ -19,8 +19,8 @@ use num_traits::Float;
 
 /// A dual scalar, with a real and dual part
 #[derive(Clone, Copy, PartialEq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 #[cfg_attr(
     feature = "bytemuck",
     derive(bytemuck::NoUninit, bytemuck::AnyBitPattern)
@@ -121,8 +121,8 @@ impl core::ops::Mul<f32> for DualScalar {
 /// Represents the same kind of transformation as an `IsoTransform` but interpolates and transforms
 /// in a way that preserves volume.
 #[derive(Clone, Copy, PartialEq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 #[cfg_attr(
     feature = "bytemuck",
     derive(bytemuck::NoUninit, bytemuck::AnyBitPattern)

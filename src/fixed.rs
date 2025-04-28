@@ -26,9 +26,9 @@ impl std::error::Error for UNormError {}
 /// `UNorm16` is always defined. However, addition, subtraction, and
 /// division can very easily overflow or underflow, so be careful!
 #[derive(Default, Copy, Clone, PartialEq, Eq, PartialOrd, Ord)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_serde", serde(transparent))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Readable, speedy::Writable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "serde", serde(transparent))]
+#[cfg_attr(feature = "speedy", derive(speedy::Readable, speedy::Writable))]
 #[cfg_attr(feature = "bytemuck", derive(bytemuck::Pod, bytemuck::Zeroable))]
 #[repr(transparent)]
 pub struct UNorm16(pub u16);
@@ -148,9 +148,9 @@ impl core::fmt::Debug for UNorm16 {
 /// `UNorm8` is always defined. However, addition, subtraction, and
 /// division can very easily overflow or underflow, so be careful!
 #[derive(Default, Copy, Clone, PartialEq, Eq, PartialOrd, Ord)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_serde", serde(transparent))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Readable, speedy::Writable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "serde", serde(transparent))]
+#[cfg_attr(feature = "speedy", derive(speedy::Readable, speedy::Writable))]
 #[cfg_attr(feature = "bytemuck", derive(bytemuck::Pod, bytemuck::Zeroable))]
 #[repr(transparent)]
 pub struct UNorm8(pub u8);

@@ -13,8 +13,8 @@ use crate::Vec4Swizzles;
 /// Preserves local angles.
 /// Scale and rotation will be applied first, then translation.
 #[derive(Clone, Copy, PartialEq)]
-#[cfg_attr(feature = "with_serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(feature = "with_speedy", derive(speedy::Writable, speedy::Readable))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "speedy", derive(speedy::Writable, speedy::Readable))]
 pub struct Conformal3 {
     /// xyz = translation, w = uniform scale
     pub translation_and_scale: Vec4,
