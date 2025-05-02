@@ -49,7 +49,7 @@ checksum = "c9627da5196e5d8ed0b0495e61e518847578da83483c37288316d9b2e03a7f72"
 
 [[package]]
 name = "macaw"
-version = "0.20.0"
+version = "0.30.0"
 dependencies = [
  "bytemuck",
  "glam",

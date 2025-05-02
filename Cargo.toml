@@ -1,6 +1,6 @@
 [package]
 name = "macaw"
-version = "0.20.0"
+version = "0.30.0"
 license = "MIT OR Apache-2.0"
 description = "An opinionated game math library built on top the excellent glam"
 keywords = ["gamedev", "math"]
