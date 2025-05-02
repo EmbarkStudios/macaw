@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `with_speedy` feature to `speedy`
 - Change `with_serde` feature to `serde`
 - Update to `glam` 0.30
+- `speedy` feature flag requires `glam` >= 0.30.3
 
 ## [0.20.0] - 2025-04-22
 
