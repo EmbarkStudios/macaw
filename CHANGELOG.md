@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
+## [0.30.0] - 2025-05-02
 
 - Change `with_speedy` feature to `speedy`
 - Change `with_serde` feature to `serde`
